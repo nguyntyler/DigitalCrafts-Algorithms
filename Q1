@@ -1,0 +1,24 @@
+// # 1. Given an array of integers, find if the array contains any duplicates.
+//     # -- Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.
+//     # -- LeetCode link: https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/578/
+
+let intArray = [1, 2, 3, 44, 6, 2, 3, 1, 2, 5, 6, 8, 10]
+let intArray2 = [1, 2, 3, 4, 5]
+
+
+function dupeCheck(numbers) {
+    let newSet = new Set()
+    let result = false
+    for (i = 0; i < numbers.length; i++) {
+        if (!(newSet.has(numbers[i]))) {
+            newSet.add(numbers[i])
+        } else if (newSet.has(numbers[i])) {
+            result = true
+        }
+    }
+    return result
+}
+console.log(dupeCheck(intArray2))
+
+
+
